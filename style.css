@@ -78,7 +78,7 @@ body {
 }
 
 .aside {
-  height: 90%;
+  height: 87%;
   width: 90%;
   background-color: white;
   border-radius: 30px;
@@ -122,4 +122,31 @@ body {
 .no-messages-text {
   font-size: 14px;
   color: #495057;
+}
+
+.current-message-container {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.current-message {
+  font-size: 24px;
+  max-width: 350px;
+  color: #495057;
+  height: fit-content;
+  padding: 0 10px;
+  overflow-x: auto;
+}
+
+.copy {
+  height: 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 100%;
+  border: #0a3871 solid 2px;
+  color: #0a3871;
+  background-color: transparent;
 }
