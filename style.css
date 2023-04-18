@@ -4,6 +4,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -149,4 +150,82 @@ body {
   border: #0a3871 solid 2px;
   color: #0a3871;
   background-color: transparent;
+}
+
+footer {
+  position: absolute;
+  font-size: 16px;
+  bottom: 10px;
+  left: 10px;
+  color: #343a40;
+}
+
+@media (max-width: 768px) {
+  body {
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    height: fit-content;
+    gap: 26px;
+  }
+
+  .main-input {
+    width: 100%;
+    height: 400px;
+    padding: 26px 50px;
+    font-size: 28px;
+  }
+
+  .main-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 0;
+    align-items: center;
+  }
+
+  .encrypt,
+  .decrypt {
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .aside {
+    height: fit-content;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 0;
+    padding: 20px 0;
+  }
+
+  .boy {
+    display: none;
+  }
+
+  .current-message {
+    margin: 26px 0;
+  }
+
+  footer {
+    position: relative;
+  }
+}
+
+@media (max-width: 440px){
+  .encrypt,
+  .decrypt {
+    height: 50px;
+    max-width: 150px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .decrypt {
+    margin-left: 5px;
+  }
+
+  .info {
+    margin-left: 10px;
+  }
 }

@@ -7,17 +7,24 @@
     <title>Document</title>
     <script src="./main.js" defer></script>
     <link rel="stylesheet" href="./style.css" />
+    <title>Alura encrypter</title>
   </head>
   <body>
     <main class="main">
       <div class="logo">
         <img src="./imgs/Vector.png" alt="Alura logo" />
       </div>
-      <textarea class="main-input" placeholder="Ingrese su texto aquí"></textarea>
+      <textarea
+        class="main-input"
+        placeholder="Ingrese su texto aquí"
+      ></textarea>
       <div class="main-buttons">
         <div class="info">
           <img src="./imgs/info.png" alt="info" />
-          <small class="info-message">Solo letras minúsculas y sin acentos</small>
+          <small class="info-message"
+            >Solo letras minúsculas y sin acentos ni carácteres
+            especiales</small
+          >
         </div>
         <div class="buttons">
           <button class="encrypt" type="button">Encriptar</button>
@@ -28,13 +35,16 @@
     <aside class="aside">
       <div class="no-messages-container" id="no-messages-container">
         <div class="boy">
-          <img src="./imgs/Muñeco.png" alt="boy">
+          <img src="./imgs/Muñeco.png" alt="boy" />
         </div>
         <div class="no-messages">
           <h2 class="no-messages-title">Ningún mensaje fue encontrado</h2>
-          <p class="no-messages-text">Ingresa el texto que desees encriptar o desencriptar</p>
+          <p class="no-messages-text">
+            Ingresa el texto que desees encriptar o desencriptar
+          </p>
         </div>
       </div>
     </aside>
+    <footer>Developed by jeva2002</footer>
   </body>
 </html>

@@ -20,8 +20,6 @@ const encrypt = (text) => {
         return char;
       })
       .join('');
-  } else {
-    throw new Error('Solo letras minúsculas y sin acentos');
   }
 };
 
@@ -51,7 +49,7 @@ const createCurrentMessageNode = () => {
 
   copyButton.addEventListener('click', () => {
     navigator.clipboard.writeText(currentMessage);
-  })
+  });
 
   return newDiv;
 };
@@ -59,13 +57,15 @@ const createCurrentMessageNode = () => {
 const encryptButton = document
   .querySelector('.encrypt')
   .addEventListener('click', () => {
-    currentMessage = encrypt(input.value);
-    if (firstTime) {
-      aside.removeChild(noMessage);
-      aside.appendChild(createCurrentMessageNode());
-      firstTime = false;
-    } else {
-      aside.replaceChildren(createCurrentMessageNode());
+    currentMessage = encrypt(input.value) ?? '';
+    if (!!currentMessage) {
+      if (firstTime) {
+        aside.removeChild(noMessage);
+        aside.appendChild(createCurrentMessageNode());
+        firstTime = false;
+      } else {
+        aside.replaceChildren(createCurrentMessageNode());
+      }
     }
   });
 
